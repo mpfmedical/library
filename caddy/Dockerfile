@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:latest
 
-FROM golang:alpine AS builder
+FROM golang:alpine3.19 AS builder
 
 RUN <<EOF
 go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
@@ -9,7 +9,7 @@ xcaddy build \
     --with github.com/baldinof/caddy-supervisor
 EOF
 
-FROM alpine:latest
+FROM alpine:3.19
 
 COPY --from=builder /go/bin/caddy /usr/bin/caddy
 
