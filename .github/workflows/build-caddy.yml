@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - "caddy/**"
+      - "caddy/Dockerfile"
       - ".github/workflows/build-caddy.yml"
 
 jobs:
