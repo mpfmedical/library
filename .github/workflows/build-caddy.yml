@@ -3,11 +3,10 @@ name: Build Caddy
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "caddy/Dockerfile"
       - ".github/workflows/build-caddy.yml"
-  workflow_dispatch:
 
 jobs:
   build:
