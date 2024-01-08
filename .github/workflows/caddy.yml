@@ -1,4 +1,4 @@
-name: Build Caddy
+name: library/caddy
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - "caddy/Dockerfile"
-      - ".github/workflows/build-caddy.yml"
+      - ".github/workflows/caddy.yml"
 
 jobs:
   build:
