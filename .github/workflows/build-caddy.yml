@@ -24,4 +24,5 @@ jobs:
         with:
           context: caddy
           tags: ghcr.io/mpfmedical/library/caddy:latest
+          platforms: linux/amd64,linux/arm64
           push: true
